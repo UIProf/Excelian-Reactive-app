@@ -1,0 +1,41 @@
+.sidebar{
+    background: #fff;
+    height: 100vh;
+    padding: 0;
+    border-right:1px solid #777;
+
+    .sidebar-header{
+        width: 100%;
+        line-height: 40px;
+        color: #000;
+        text-align: left;
+        padding: 15px;
+        border-bottom: 1px solid #777;
+    }
+
+    .sidenav{
+        margin: 0;
+        padding: 15px;
+        list-style: none;
+
+        li{
+            margin: 15px;
+            color: #888;
+            text-align: left;
+
+            a{
+                color: inherit;
+
+                .fa{
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .sidebar{
+        display: none;
+    }
+  }

@@ -1,0 +1,141 @@
+@import "_variables/border";
+@import "_variables/colors";
+@import "_variables/sizes";
+@import "_variables/font";
+@import "clearfix";
+
+
+@import "media-queries";
+
+.searchsection{
+  position: relative;
+  width: 100%;
+  background: #777;
+  padding: 0;
+
+  .main-header{
+    width: 100%;
+    line-height: 40px;
+    color: #000;
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #777;
+    background: #FFF;
+
+    .settingicon{
+      float: right;
+    }
+
+    h2{
+      margin: 0;
+      padding: 0 0 0 10px;
+      text-align: left;
+      display: inline-block;
+      font-size: inherit;
+    }
+  }
+
+  .searchresultbox{
+    background: #fff;
+    margin: 15px;
+
+    .searchinput{
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #777;
+
+      .searchbtn{
+        position: absolute;
+        border: none;
+        background: transparent;
+        left: 4px;
+        top: 20px;
+      }
+
+      input[type=text]{
+        width: calc(100% - 20px);
+        line-height: 20px;
+        padding: 20px 10px 20px 30px;
+        background: transparent;
+        border: none;
+      }
+      
+    }
+    .userResult{
+      padding:10px 0;
+      text-align: left;
+
+      .resultrow{
+        display: flex;
+
+        
+
+        > div{
+          line-height: 40px;
+          border-bottom: 1px solid #777;
+          padding: 10px;
+          width: 26%;
+
+          &:first-child{
+            border-bottom: 0;
+            width: 10%;
+
+            img{
+              border-radius: 50px;
+              width: 100%;
+            }
+          }
+          &:last-child{
+            width:10%;
+          }
+        }
+
+      }
+      hr{
+        display: none;
+      }
+    }
+
+  }
+
+  
+  
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .col-md-8 {
+    width: 100%;
+  }
+  .resultrow{
+    display: block !important;
+    overflow: hidden !important;
+
+    
+
+    > div {
+      float: left !important;
+    width: 60% !important;
+    line-height: 10px !important;
+    border: none !important;
+
+      &:first-child{
+        float: left !important;
+        width: 20% !important;
+      }
+
+      &:last-child{
+        float: left !important;
+        width: 20% !important;
+        position: relative !important;
+        top: -48px !important;
+        border: none !important;
+      }
+    }
+  }
+  hr{
+    border: 1px solid #777;
+    margin-left: 20%;
+  }
+
+}
